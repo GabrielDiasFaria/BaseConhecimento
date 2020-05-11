@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 
 import '../styles/style.css'
 import api from '../../../service/api'
@@ -40,12 +41,12 @@ export default function MenuBlogView() {
             <div className="container box_1170 main-menu">
                 <div className="row align-items-center justify-content-between d-flex">
                     <div id="logo">
-                        <a href="/blog"><img src={logo} width="55" height="55" alt="" title="" /></a>
+                        <Link to="/blog"><img src={logo} width="55" height="55" alt="" title="" /></Link>
                     </div>
                     <nav id="nav-menu-container">
                         <ul className="nav-menu">
 
-                            <li><a href="/blog">Categorias</a>
+                            <li><Link to="/blog">Categorias</Link>
                                 <ul>
                                     {
                                         Parser(categories)
@@ -64,14 +65,14 @@ export default function MenuBlogView() {
                                     <li><a href="elements.html">Elements</a></li>
                                 </ul>
                             </li> */}
-                            <li><a href="/blog">Sobre</a></li>
+                            <li><Link to="/blog">Sobre</Link></li>
                             {/* <li className="menu-has-children"><a href="/blog">Blog</a>
                                 <ul>
                                     <li><a href="blog-details.html">Blog Details</a></li>
                                 </ul>
                             </li> */}
-                            <li><a href="/blog">Contato</a></li>
-                            <li><a href="/blog">Login</a></li>
+                            <li><Link to="/blog">Contato</Link></li>
+                            <li><Link to="/blog">Login</Link></li>
                         </ul>
                     </nav>
                 </div>

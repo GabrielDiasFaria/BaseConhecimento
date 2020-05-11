@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 
 import '../styles/style.css'
 import api from '../../../service/api'
@@ -28,40 +29,42 @@ export default function SinglePostItem() {
                                 <img className="post-img img-fluid" src={p1} alt=""></img>
                             </figure>
                             <h3>
-                                <a href={`/blog/blogdetails/${line.id}`}>{line.name}</a>
+                                <Link to={`/blog/blogdetails/${line.id}`} className="">
+                                    {line.name}
+                                </Link>
                             </h3>
                             <p>{line.description}</p>
-                            <a href={`/blog/blogdetails/${line.id}`} className="primary-btn text-uppercase mt-15">Continuar lendo</a>
+                            <Link to={`/blog/blogdetails/${line.id}`} className="primary-btn text-uppercase mt-15">Continuar lendo</Link>
                             <div className="post-box">
                                 <div className="d-flex">
                                     <div>
-                                        <a href={`/blog/blogdetails/${line.id}`}>
+                                        <Link to={`/blog/blogdetails/${line.id}`}>
                                             <img src={a1} alt=""></img>
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="post-meta">
                                         <div className="meta-head">
-                                            <a href={`/blog/blogdetails/${line.id}`}>{line.author}</a>
+                                            <Link to={`/blog/blogdetails/${line.id}`}>{line.author}</Link>
                                         </div>
                                         <div className="meta-details">
                                             <ul>
                                                 <li>
-                                                    <a href={`/blog/blogdetails/${line.id}`}>
+                                                    <Link to={`/blog/blogdetails/${line.id}`}>
                                                         <span className="lnr lnr-calendar-full"></span>
                                                         0
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href={`/blog/blogdetails/${line.id}`}>
+                                                    <Link to={`/blog/blogdetails/${line.id}`}>
                                                         <span className="lnr lnr-picture"></span>
                                                         {line.category}
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href={`/blog/blogdetails/${line.id}`}>
+                                                    <Link to={`/blog/blogdetails/${line.id}`}>
                                                         <span className="lnr lnr-bubble"></span>
                                                         0 Comentários
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -71,9 +74,9 @@ export default function SinglePostItem() {
                         </div>
                     ))
                 ) : (
-                        <a href="/blog" className="justify-content-between align-items-center d-flex">
+                        <Link to="/blog" className="justify-content-between align-items-center d-flex">
                             <p>Não possui categoria cadastrada!</p>
-                        </a>
+                        </Link>
                     )
             }
         </section>

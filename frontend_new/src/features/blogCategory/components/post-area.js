@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 import c1 from '../../../assets/img/category/c1.jpg'
 import a1 from '../../../assets/img/author/a1.png'
@@ -16,34 +17,34 @@ export default function PostArea({ articles }) {
                                         <img className="post-img img-fluid" src={c1} alt=""></img>
                                     </figure>
                                     <h3>
-                                        <a href={`/blog/blogdetails/${line.id}`}>{line.name}</a>
+                                        <Link to={`/blog/blogdetails/${line.id}`}>{line.name}</Link>
                                     </h3>
                                     <p>{line.description}</p>
-                                    <a href={`/blog/blogdetails/${line.id}`} className="primary-btn text-uppercase mt-15">Continuar Lendo</a>
+                                    <Link to={`/blog/blogdetails/${line.id}`} className="primary-btn text-uppercase mt-15">Continuar Lendo</Link>
                                     <div className="post-box">
                                         <div className="d-flex">
                                             <div>
-                                                <a href={`/blog/blogdetails/${line.id}`}>
+                                                <Link to={`/blog/blogdetails/${line.id}`}>
                                                     <img src={a1} alt=""></img>
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="post-meta">
                                                 <div className="meta-head">
-                                                    <a href={`/blog/blogdetails/${line.id}`}>{line.author}</a>
+                                                    <Link to={`/blog/blogdetails/${line.id}`}>{line.author}</Link>
                                                 </div>
                                                 <div className="meta-details">
                                                     <ul>
                                                         <li>
-                                                            <a href={`/blog/blogdetails/${line.id}`}>
+                                                            <Link to={`/blog/blogdetails/${line.id}`}>
                                                                 <span className="lnr lnr-calendar-full"></span>
 													            13th Oct, 2018
-												            </a>
+												            </Link>
                                                         </li>
                                                         <li>
-                                                            <a href={`/blog/blogdetails/${line.id}`}>
+                                                            <Link to={`/blog/blogdetails/${line.id}`}>
                                                                 <span className="lnr lnr-bubble"></span>
 													            0
-												            </a>
+												            </Link>
                                                         </li>
                                                     </ul>
                                                 </div>

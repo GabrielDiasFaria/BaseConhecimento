@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 import '../styles/style.css'
 
@@ -13,11 +14,11 @@ export default function BannerArea({ category }) {
                             {category}
                         </h1>
                         <p className="text-white link-nav">
-                            <a href="index.html">Home </a>
+                            <Link to="/blog">Home </Link>
                             <span className="lnr lnr-arrow-right"></span>
-                            <a href="category.html">
+                            <Link to="/blog">
                                 Categoria
-                            </a>
+                            </Link>
                         </p>
                     </div>
                 </div>
