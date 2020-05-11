@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 400 14px Montserrat, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background-color:#f1f2f7;
+  width:100%;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+*{
+    font: 400 12px Montserrat, sans-serif;
+}
